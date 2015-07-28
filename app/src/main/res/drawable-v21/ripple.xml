@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file isn't currently being used, but here's what a ripple looks like in XML-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#3fffffff">
+    <item >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/accent_material_light" />
+        </shape>
+    </item>
+</ripple>

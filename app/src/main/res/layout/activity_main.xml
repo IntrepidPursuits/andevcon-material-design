@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--activity_main.xml-->
+    <!--Toolbar sits alone at the top of your layout-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!--Root DrawerLayout must only have two children.-->
+        <!-- -->
+        <!--First child is View/Fragment containing your app content-->
+        <!-- -->
+        <!--Second child is View/Fragment containing navigation drawer content-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_color"
+                android:text="@string/info_button_text"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/main_button"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/default_margin"
+                app:cardCornerRadius="@dimen/default_corner_radius"
+                app:cardElevation="@dimen/default_elevation">
+
+                <TextView
+                    android:id="@+id/image_placeholder_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/image_placeholder_text"/>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
+                app:cardCornerRadius="@dimen/default_corner_radius"
+                app:cardElevation="@dimen/default_elevation">
+
+                <TextView
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/info_text_caption"/>
+            </android.support.v7.widget.CardView>
+
+
+            <!--This is just an ImageView with some FABulous extra properties-->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/default_margin"
+                android:src="@drawable/ic_add_photo"
+                app:elevation="@dimen/higher_elevation"
+                app:fabSize="normal"
+                app:rippleColor="@color/ripple_white"/>
+
+            <!--other things to play with:-->
+            <!--app:pressedTranslationZ=""-->
+            <!--app:backgroundTint=""-->
+            <!--app:backgroundTintMode=""-->
+            <!--app:borderWidth=""-->
+            <!--and more-->
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            app:headerLayout="@layout/nav_header_layout"
+            app:menu="@menu/nav_menu"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

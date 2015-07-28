@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Material Design Elements</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
+
+    <string name="image_error">Error loading image.</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="info_prompt">If you can see this, congrats - your device runs Android Lollipop (or something newer).  The button you just clicked serves no purpose other than to show you how easy it is to add custom touch feedback to your views.  Did you notice that pretty ripple effect?  If not, click \'OK\' and hold that bad boy down a little longer.</string>
+    <string name="ok">OK</string>
+    <string name="info_button_text">Info Button</string>
+    <string name="image_placeholder_text">[Image will load here]</string>
+    <string name="info_text_caption">Click the Floating Action Button to select a photo. The colors on this screen will be changed to match the photo you choose!</string>
+    <string name="about_this_app">This app is meant to accompany Guilerhme Schmitt\'s 2015 AnDevCon talk, titled \'Mastering Material Design\'. The source code can be accessed via the menu below. Code samples provided by Guy Dupont at Intrepid Pursuits.</string>
+</resources>

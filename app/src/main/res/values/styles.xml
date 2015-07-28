@@ -1,0 +1,15 @@
+<resources>
+
+    <!--/res/values/styles.xml-->
+    <!-- Base application theme. We use NoActionBar because we are implementing our own Toolbar -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <!--This is necessary for the hamburger -> arrow animation on sliding nav drawer-->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+    </style>
+
+</resources>
